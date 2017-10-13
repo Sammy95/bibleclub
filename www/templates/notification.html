@@ -1,0 +1,55 @@
+<ion-view view-title="Notification" class="bg" hide-back-button="true">
+	<ion-nav-buttons side="left">
+    <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+    </button>
+    </ion-nav-buttons>
+    <ion-nav-title>
+      <h1 class="title">Bible Club</h1>
+    </ion-nav-title>      
+	<ion-content class="has-header padding bg">
+	<div class="list card padding bglogin" ng-repeat="item in notif track by $index">
+	<div class="padding" style="background-color: #fff;">
+		<h4>{{item.judul}}</h4>
+		{{item.isi}}
+		<div class="actionbtn" ng-show="item.tipe == 'Request Join Contact'">
+			<div class="buttons" align="left">
+                <button class="button button-small button-positive" style="align:center" ng-click="Acceptpcm(item.idsender,item.idnotif)">
+                    <i class="icon ion-checkmark"> Accept</i>
+                </button>
+                <button class="button button-small button-dark" style="align:center"ng-click="Rejectpcm(item.idsender,item.idnotif)">
+                    <i class="icon ion-close"> Reject</i>
+                </button>
+   
+     		</div>
+		</div>
+		<div class="actionbtn" ng-show="item.tipe == 'Request Move Contact'">
+			<div class="buttons" align="left">
+                <button class="button button-small button-positive" style="align:center" ng-click="Acceptmove(item.idsender)">
+                    <i class="icon ion-checkmark"> Accept</i>
+                </button>
+                <button class="button button-small button-dark" style="align:center"ng-click="Rejectmove(item.idsender)">
+                    <i class="icon ion-close"> Reject</i>
+                </button>
+   
+     		</div>
+		</div>
+		<div class="actionbtn" ng-show="item.tipe == 'Request Leave Contact'">
+			<div class="buttons" align="left">
+                <button class="button button-small button-positive" style="align:center" ng-click="Acceptleave(item.idsender)">
+                    <i class="icon ion-checkmark"> Accept</i>
+                </button>
+                <button class="button button-small button-dark" style="align:center"ng-click="Rejectleave(item.idsender)">
+                    <i class="icon ion-close"> Reject</i>
+                </button>
+   
+     		</div>
+		</div>
+
+	</div>
+	<div class="button-right" style="margin-top: 2%; float: right;">
+	
+	Dari: {{item.sender}}
+	</div>
+	</div>
+	</ion-content>
+</ion-view>

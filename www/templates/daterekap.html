@@ -1,0 +1,35 @@
+<ion-view view-title="Bible Club">
+   <ion-header-bar class="bar-royal">
+        <button class="button-icon icon  ion-chevron-left" style="color:#fff;" ng-click="$ionicGoBack()"></button>  
+        <h1 class="title">Tanggal Rekap</h1>
+    </ion-header-bar>
+
+    <ion-content class='has-header bg'>
+        
+    <div style="margin:0 auto; text-align:left; ">
+         <a ng-click="yesterdaylink()">
+        <div class="col card" style="margin-top:3%; margin-left:2%; padding-left:1%; padding-right:3%;">
+       
+            <h4>{{yesterday |date:'dd-MM-yyyy'}}</h4>
+            <div class="button-icon ion-chevron-right" style="float:right; display:inline-block; font-size:300%; verticalalign:middle;"></div>
+        </div>
+        </a>
+
+         <a ng-click="todaylink()">
+        <div class="col card" style="margin-top:3%; margin-left:2%; padding-left:1%; padding-right:3%;">
+       
+            <h4>{{today |date:'dd-MM-yyyy'}}</h4>
+            <div class="button-icon ion-chevron-right" style="float:right; display:inline-block; font-size:300%; verticalalign:middle;"></div>
+        </div>
+        </a>
+
+         <a ng-click="tomorrowlink()">
+        <div class="col card" style="margin-top:3%; margin-left:2%; padding-left:1%; padding-right:3%;">
+       
+            <h4>{{tomorrow |date:'dd-MM-yyyy'}}</h4>
+            <div class="button-icon ion-chevron-right" style="float:right; display:inline-block; font-size:300%; verticalalign:middle;"></div>
+        </div>
+        </a>
+    </div>
+    </ion-content>
+</ion-view>

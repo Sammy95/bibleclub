@@ -1,0 +1,35 @@
+<ion-view view-title="Hasil Rekap">
+    <ion-header-bar class="bar-royal">
+        <button class="button-icon icon  ion-chevron-left" style="color:#fff;" ng-click="$ionicGoBack()"></button>  
+        <h1 class="title">List Rekapan</h1>
+    </ion-header-bar>
+
+    <ion-content class='has-header bg'>
+        <ion-list>
+           
+           
+        <div ng-repeat= "item in rekap">
+            <div class="list card" style="padding:1%;">
+                <div class="col-50" style="float:left;">
+                
+                <h5>{{item.username}} </h5>
+                 
+                </div>
+                  <div class="col-33" style="float:right; position: relative;">
+                    <div ng-if="item.status == 'Sudah Baca'">
+                    <h5>Sudah Baca</h5>
+                     </div>   
+                     <div ng-if="item.status == 'Belum Baca'">
+                    <h5>Belum Baca</h5>
+                     </div>   
+                    <!--<h5>{{datas}}</h5>-->
+                  
+                </div>
+            </div>
+        </div>
+            
+      
+        </ion-list>
+        
+    </ion-content>
+</ion-view>

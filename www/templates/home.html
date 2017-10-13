@@ -1,0 +1,35 @@
+<ion-view view-title="Bible Club" hide-back-button="true" class="bg">
+    <ion-header-bar class="bar bar-header bar-royal">
+        <h1 class="title">Bible Club</h1>
+        <button class="button-icon button-royal ion-gear-a" style="font-size:24px; vertical-align: middle; right:0;" ui-sref="signout"></button>
+    </ion-header-bar>
+    <ion-content class='has-header padding'>
+        <ion-list>
+            <ion-item class="item-icon-left" type="item-text-wrap" ng-click="gotochat()">
+                <i class="icon ion-chatbubbles"></i>
+                <h2>Chats</h2>
+            </ion-item>
+        </ion-list>
+        <ion-list> 
+            <ion-item class="item-icon-left" type="item-text-wrap" ui-sref="app.datebible({reload:true})">
+                <i class="icon ion-ios-book"></i>
+                <h2>Bacaan Alkitab Hari ini</h2>
+            </ion-item>
+        </ion-list>
+         <ion-list> 
+            <ion-item class="item-icon-left" type="item-text-wrap" ui-sref="app.daterekap()">
+                <i class="icon ion-clipboard"></i>
+                <h2>Hasil Rekap</h2>
+            </ion-item>
+        </ion-list>
+        
+     
+       
+       <!-- <button class="button"style="text-align:center;background-color:red;margin-top: 25%; margin-left:40%; margin-right:40%; width:20%;" ng-click="resetrekap()">
+            
+                
+                <h5 style="color:#fff;">Reset Rekap</h5>
+            </button>-->
+    </ion-content>
+</ion-view>
+

@@ -1,0 +1,37 @@
+<ion-view title="Chats" class="light-grey">
+        <ion-header-bar class="bar-dark">
+        <button class="button-icon icon  ion-chevron-left" style="color:#fff;" ng-click="$ionicGoBack()"></button>  
+        <h1 class="title">Bible Club</h1>
+    </ion-header-bar>
+<ion-content has-bouncing="true" class="content">
+  <div class="list" id="messages">
+      <li class="item item-text-wrap no-border {{ isNotCurrentUser(msg.from) }}" ng-repeat="msg in chatsGetRoom" style="background: transparent;">
+        <div class="msg">         
+          <div class="details padding">         
+          <p>
+            <div class="user" ng-if="msg.from != username"><h4>{{ msg.from }}</h4></div>
+            <div class="message">{{ msg.message }}</div>
+          </p>
+          <small>{{ humanize(msg.time) }}</small> 
+          </div>
+        </div>
+      </li>
+  </div>  
+
+    <!--<div class="card" ng-if="!chatsGetRoom.length">
+      <div class="item item-text-wrap">
+        No messages yet.
+      </div>
+    </div>-->
+  </ion-content>
+  <div class="list light-grey bottommsg">
+      <div class="item item-input-inset light-grey">
+        <label  class="item-input-wrapper line-light-grey nopadtop">
+          <input class="line-light-grey" ng-change="updateTyping()" type="text"  placeholder="Message" ng-enter="sendMessage()" ng-model="IM.textMessage"> 
+        </label>
+        <div class="divsend">
+              <button class="button ion-android-send iconsend" ng-click="sendMessage()"></button>
+        </div>
+      </div>
+  </div>  
+     </ion-view>

@@ -1,0 +1,21 @@
+<ion-pane>
+    <ion-header-bar class="bar-royal">
+        <button class="button button-icon icon  ion-chevron-left" ng-click="$ionicGoBack()"></button>    
+        <h1 class="title">Bible Club</h1>
+    </ion-header-bar>
+<ion-view view-title="Bible">
+    <ion-content class='has-header'>
+        <ion-list style="padding:1%;">
+            <div ng-repeat= "item in biblecontent" style="margin-top:2%;text-align: center;margin: 2%;">
+                <h4>{{item.kitab}} {{item.pasal}}</h4>
+                <br>
+                <div class="isialkitab" ng-repeat= "item2 in item.ayat" style="text-align: justify; ">
+                {{item2.ayat}} - {{item2.firman}};
+                </div>
+            
+            </div>
+        </ion-list>
+         <button class="button-balanced button-block large-button ion-thumbsup" ng-click="submit()"><h4>Saya Sudah Baca Alkitab</h4></button>
+    </ion-content>
+</ion-view>
+</ion-pane>

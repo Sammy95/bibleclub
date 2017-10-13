@@ -1,0 +1,26 @@
+<ion-view view-title="Login">
+    <ion-content class="padding bg">
+        <div class="list style="align:margin: 0 auto;" ">
+            <img src="img/logohfc.png" class="logo">
+            
+        </div>
+        <div class="list card padding">
+            <label class="item item-input">
+                <span class="input-label">Username</span>
+                <input type="text" ng-model="data.username" style = "background-color:#ece4e4">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Password</span>
+                <input type="password" ng-model="data.password" style = "background-color:#ece4e4">
+            </label>
+            <button ng-click="loginUser()" class="button button-block button-positive activated">
+                Sign In
+            </button>
+        </div>
+        <div class="list" style="text-align:center">
+            <button ng-click="modal.show()" class="button button-small button-positive icon-left ion-person-add button-positive">
+                Create New Account
+            </button>
+        </div>
+    </ion-content>
+</ion-view>
